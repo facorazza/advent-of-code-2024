@@ -9,8 +9,7 @@ with open("input.txt", "r") as file:
         print(f"{el} {delta}")
 
         if (
-                all(map(lambda x: x >= -3 and x < 0, delta)) or \
-                all(map(lambda x: x > 0 and x <= 3, delta))
+                all(map(lambda x: x >= -3 and x < 0 or x > 0 and x <= 3, delta))
             ) and ( \
                 all(map(lambda x: x < 0, delta)) or \
                 all(map(lambda x: x > 0, delta))
